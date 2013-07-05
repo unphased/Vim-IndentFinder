@@ -1,3 +1,10 @@
+As the interim maintainer of this plugin, I have (so far) just one thing remaining on my todo list for this plugin:
+
+1. Make the install with Vundle seamless. Currently requires running `./setup.py install`, 
+this is decent if you want the plugin to work on a system with python but running a vim 
+without python integration, but I am not sure how common that situation is.
+We really should just directly run the code somehow. Even if vim has no python.
+
 ## [Indent Finder](http://www.freehackers.org/Indent_Finder)
 
 Indentation finder, by Philippe Fremy <phil at freehackers dot org>
