@@ -4,6 +4,6 @@ augroup IndentFinder
     au BufRead *.* execute b:indent_finder_result
 
     " Uncomment the next line to see which indentation is applied on all your loaded files
-    au BufRead *.* echom "Indent Finder: " . b:indent_finder_result
+    au BufRead *.* redraw | echom "Indent Finder: " . b:indent_finder_result
 augroup End
 
