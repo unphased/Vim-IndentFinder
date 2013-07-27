@@ -1,9 +1,9 @@
 augroup IndentFinder
     au! IndentFinder
-    au BufRead * let b:indent_finder_result = system('python -c "import indent_finder; indent_finder.main()" --vim-output "' . expand('%') . '"' )
-    au BufRead * execute b:indent_finder_result
+	" Path-of-least-resistance approach; invokes system python (not embedded
+	" python)
+    au BufRead * let b:indent_finder_result = system('python ~/.vim/bundle/Vim-IndentFinder/indent_finder.py --vim-output "' . expand('%') . '"' ) | execute b:indent_finder_result | redraw | echom "Indent Finder: " . b:indent_finder_result
 
     " Uncomment the next line to see which indentation is applied on all your loaded files
-    au BufRead * redraw | echom "Indent Finder: " . b:indent_finder_result
 augroup End
 
