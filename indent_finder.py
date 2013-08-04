@@ -1,4 +1,4 @@
-#
+# 
 # Indentation finder, by Philippe Fremy <phil at freehackers dot org>
 # Copyright 2002-2008 Philippe Fremy
 #
@@ -38,9 +38,9 @@ DEFAULT_TAB_WIDTH = 4
 # DEFAULT_RESULT = ('space', 4 )
 # DEFAULT_RESULT = ('space', 2 )
 # DEFAULT_RESULT = ('space', 8 )
-# DEFAULT_RESULT = ('tab', DEFAULT_TAB_WIDTH )
+DEFAULT_RESULT = ('tab', DEFAULT_TAB_WIDTH )
 
-DEFAULT_RESULT = ('space', 4 )
+# DEFAULT_RESULT = ('space', 4 )
 
 VERBOSE_QUIET   = 0
 VERBOSE_INFO    = 1
