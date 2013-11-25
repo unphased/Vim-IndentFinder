@@ -446,7 +446,7 @@ def main():
         elif opt == "--version": 
             print 'IndentFinder v%s' % VERSION
             return
-        elif opt[0] == "-": 
+        elif len(opt) and opt[0] == "-":
             print help % sys.argv[0]
             return
         else:
@@ -466,12 +466,13 @@ def main():
         return
 
     else:
-        # only one file, don't print filename
-        fi.parse_file_list( file_list )
-        if VIM_OUTPUT:
-            sys.stdout.write( fi.vim_output() )
-        else:
-            print str(fi)
+        if len(file_list) and len(file_list[0]):
+            # only one file, don't print filename
+            fi.parse_file_list( file_list )
+            if VIM_OUTPUT:
+                sys.stdout.write( fi.vim_output() )
+            else:
+                print str(fi)
 
 
 if __name__ == "__main__":
