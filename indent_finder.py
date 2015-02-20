@@ -386,7 +386,7 @@ class IndentFinder:
             if indent_value == None: # no lines
                 result = self.default_result
             else:
-                result = ('mixed', (8,indent_value) )
+                result = ('mixed', (4,indent_value) )
 
         else:
             # not enough information to make a decision
